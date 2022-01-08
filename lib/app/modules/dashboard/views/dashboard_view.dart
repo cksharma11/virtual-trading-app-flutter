@@ -14,7 +14,7 @@ class DashboardView extends GetView<DashboardController> {
         title: Text(Headers.watchlist),
         centerTitle: true,
         foregroundColor: Colors.black,
-        backgroundColor: Color.fromARGB(1, 231, 234, 233),
+        backgroundColor: CupertinoColors.lightBackgroundGray,
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
@@ -42,11 +42,34 @@ class DashboardView extends GetView<DashboardController> {
         ],
       ),
       body: Center(
-        child: Text(
-          'DashboardView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+          child: ListView(
+        children: [
+          Container(
+              height: 40,
+              margin: EdgeInsets.all(10),
+              child: TextField(
+            decoration: InputDecoration(
+              contentPadding: EdgeInsets.zero,
+              fillColor: Colors.white,
+              prefixIcon: Icon(Icons.search, color: Colors.grey),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(5),
+                ),
+              ),
+              hintText: ' Search',
+            ),
+          )),
+          ListTile(
+            title: Text('NIFTY 50'),
+            subtitle: Text('INDICES'),
+            trailing: Column(children: [
+              Text('1156.25'),
+              Text('11.50 (0.10%)'),
+            ]),
+          ),
+        ],
+      )),
     );
   }
 }
