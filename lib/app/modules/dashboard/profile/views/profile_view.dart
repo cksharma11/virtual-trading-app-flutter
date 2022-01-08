@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:starter/app/theme/app_colors.dart';
 import 'package:starter/app/theme/styles.dart';
 
 class ProfileView extends StatelessWidget {
@@ -17,7 +18,23 @@ class ProfileView extends StatelessWidget {
             style: Styles.tsPrimaryColorRegular16,
           ),
           isThreeLine: true,
-          trailing: Icon(Icons.person, size: 60,),
+          trailing: Container(
+            height: 60,
+            width: 60,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+                border: Border.all(
+                  color: AppColors.black,
+                  width: 2,
+                ),
+                borderRadius: BorderRadius.all(Radius.circular(100))),
+            child: Text(
+              'CK',
+              style: TextStyle(
+                fontSize: 28,
+              ),
+            ),
+          ),
         ),
         ListTile(
           title: Text(
