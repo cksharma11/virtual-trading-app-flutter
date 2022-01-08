@@ -65,7 +65,7 @@ class DashboardView extends GetView<DashboardController> {
             subtitle: Text('INDICES'),
             trailing: Column(children: [
               Text('1156.25'),
-              Text('11.50 (0.10%)'),
+              Text('+11.50 (+0.10%)', style: TextStyle(color: Colors.green),),
             ]),
           ),
         ],
