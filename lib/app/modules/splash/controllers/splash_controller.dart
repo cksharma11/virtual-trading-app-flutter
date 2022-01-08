@@ -12,9 +12,9 @@ class SplashController extends GetxController {
   _startOnboarding() async {
     await Future.delayed(Duration(seconds: 3));
 
-    if (Storage.isUserExists())
-      Get.offAllNamed(Routes.HOME);
-    else
-      Get.offAllNamed(Routes.AUTH_LOGIN);
+    // if (Storage.isUserExists())
+    //   Get.offAllNamed(Routes.HOME);
+    // else
+    //   Get.offAllNamed(Routes.AUTH_LOGIN);
   }
 }

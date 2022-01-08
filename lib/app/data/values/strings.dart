@@ -20,3 +20,19 @@ class ErrorMessages {
   static const invalidName = 'Invalid Name';
   static const invalidEmail = 'Invalid Email';
 }
+
+class BottomNavigationButtons {
+  BottomNavigationButtons._privateConstructor();
+
+  static const watchlist = 'Watchlist';
+  static const learn = 'Learn';
+  static const orders = 'Orders';
+  static const portfolio = 'Portfolio';
+  static const profile = 'profile';
+}
+
+class Headers {
+  Headers._privateConstructor();
+
+  static const watchlist = 'Watchlist';
+}
