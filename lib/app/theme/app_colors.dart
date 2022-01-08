@@ -7,4 +7,6 @@ class AppColors {
   static final shimmerHighlightColor = Colors.grey[350]!;
   static final black = Colors.black;
   static final appBarBackground = Colors.grey;
+  static const red = Colors.red;
+  static const green = Colors.green;
 }
