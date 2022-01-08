@@ -15,11 +15,11 @@ class WatchlistView extends StatelessWidget {
             child: ListView.separated(
               itemBuilder: (context, index) => TickerItem(
                 currentPrice: 11021.0,
-                openingPrice: 12021.0,
+                openingPrice: 11010.0,
                 stockName: 'INDIGO $index',
                 symbol: 'INDIGO INDIA',
               ),
-              itemCount: 100,
+              itemCount: 20,
               separatorBuilder: (BuildContext context, int index) => Divider(),
             ),
           ),

@@ -17,6 +17,18 @@ class Styles {
     fontSize: 18.0,
   );
 
+  static const tsPrimaryColorRegular16 = TextStyle(
+    color: AppColors.primaryColor,
+    fontWeight: FontWeight.w400,
+    fontSize: 16.0,
+  );
+
+  static const tsPrimaryColorRegular14 = TextStyle(
+    color: AppColors.primaryColor,
+    fontWeight: FontWeight.w400,
+    fontSize: 14.0,
+  );
+
   static const tsRedRegular16 = TextStyle(
     color: AppColors.red,
     fontWeight: FontWeight.w400,

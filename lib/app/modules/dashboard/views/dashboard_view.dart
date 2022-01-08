@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:starter/app/modules/dashboard/orders/views/orders_view.dart';
+import 'package:starter/app/modules/dashboard/profile/views/profile_view.dart';
 import 'package:starter/app/modules/dashboard/watchlist/views/watchlist_view.dart';
 import 'package:starter/widgets/bottom_navigation/bottom_navigation.dart';
 
@@ -23,7 +24,7 @@ class DashboardView extends GetView<DashboardController> {
           OrdersView(),
           OrdersView(),
           OrdersView(),
-          OrdersView(),
+          ProfileView(),
         ],
         onPageChanged: controller.onPageSelection,
         controller: controller.pageController,
