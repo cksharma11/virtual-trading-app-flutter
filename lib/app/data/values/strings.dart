@@ -6,6 +6,7 @@ class Strings {
   static const mobileNumber = 'Mobile Number';
   static const getOTP = 'Get OTP';
   static const retry = 'Retry';
+  static const watchlist = 'Watchlist';
 }
 
 class ErrorMessages {
@@ -29,10 +30,4 @@ class BottomNavigationButtons {
   static const orders = 'Orders';
   static const portfolio = 'Portfolio';
   static const profile = 'Profile';
-}
-
-class Headers {
-  Headers._privateConstructor();
-
-  static const watchlist = 'Watchlist';
 }
