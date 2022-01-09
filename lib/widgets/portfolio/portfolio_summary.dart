@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:starter/app/data/values/strings.dart';
-import 'package:starter/app/theme/styles.dart';
+import 'package:starter/widgets/custom_text/custom_text.dart';
 
 class PortfolioSummary extends StatelessWidget {
   final double investedMoney;
@@ -32,26 +32,14 @@ class PortfolioSummary extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Text(
-                      Strings.invested,
-                      style: Styles.tsPrimaryColorRegular14,
-                    ),
-                    Text(
-                      investedMoney.toString(),
-                      style: Styles.tsPrimaryColorRegular18,
-                    )
+                    CustomText.tsPrimaryRegular14Text(Strings.invested),
+                    CustomText.tsPrimaryRegular18Text(investedMoney.toString()),
                   ],
                 ),
                 Column(
                   children: [
-                    Text(
-                      Strings.current,
-                      style: Styles.tsPrimaryColorRegular14,
-                    ),
-                    Text(
-                      currentValue.toString(),
-                      style: Styles.tsPrimaryColorRegular18,
-                    )
+                    CustomText.tsPrimaryRegular14Text(Strings.current),
+                    CustomText.tsPrimaryRegular18Text(currentValue.toString()),
                   ],
                 )
               ],
@@ -60,20 +48,11 @@ class PortfolioSummary extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  Strings.profit_loss,
-                  style: Styles.tsPrimaryColorRegular18,
-                ),
+                CustomText.tsPrimaryRegular18Text(Strings.profit_loss),
                 Row(
                   children: [
-                    Text(
-                      '$tickerSymbol${change.abs()}',
-                      style: Styles.tsPrimaryColorRegular18,
-                    ),
-                    Text(
-                      '($tickerSymbol$changePercentage%)',
-                      style: Styles.tsPrimaryColorRegular14,
-                    ),
+                    CustomText.tsPrimaryRegular18Text('$tickerSymbol${change.abs()}'),
+                    CustomText.tsPrimaryRegular14Text('($tickerSymbol$changePercentage%)'),
                   ],
                 )
               ],

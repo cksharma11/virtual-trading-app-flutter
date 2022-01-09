@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:starter/app/theme/styles.dart';
+import 'package:starter/app/data/values/strings.dart';
+import 'package:starter/widgets/custom_text/custom_text.dart';
 import 'package:starter/widgets/portfolio/portfolio_summary.dart';
 
 class PortfolioView extends StatelessWidget {
@@ -10,11 +11,7 @@ class PortfolioView extends StatelessWidget {
     return SafeArea(
       child: Column(
         children: [
-          Text(
-            'Portfolio',
-            style: TextStyle(fontSize: 24),
-            textAlign: TextAlign.left,
-          ),
+          CustomText.tsPrimaryRegular24Text(BottomNavigationButtons.portfolio),
           DefaultTabController(
             length: 2,
             initialIndex: 0,
@@ -22,18 +19,8 @@ class PortfolioView extends StatelessWidget {
               isScrollable: false,
               controller: null,
               tabs: [
-                Tab(
-                  child: Text(
-                    'Holdings',
-                    style: Styles.tsPrimaryColorRegular14,
-                  ),
-                ),
-                Tab(
-                  child: Text(
-                    'Positions',
-                    style: Styles.tsPrimaryColorRegular14,
-                  ),
-                ),
+                CustomText.tsPrimaryRegular14Text('Holdings'),
+                CustomText.tsPrimaryRegular14Text('Positions'),
               ],
             ),
           ),

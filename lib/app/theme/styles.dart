@@ -10,6 +10,11 @@ class Styles {
     fontSize: 18.0,
   );
 
+  static const tsPrimaryColorRegular24 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 24.0,
+  );
+
   static const tsPrimaryColorRegular18 = TextStyle(
     fontWeight: FontWeight.w400,
     fontSize: 18.0,
@@ -38,6 +43,18 @@ class Styles {
     fontSize: 16.0,
   );
 
+  static const tsRedRegular18 = TextStyle(
+    color: AppColors.red,
+    fontWeight: FontWeight.w400,
+    fontSize: 18.0,
+  );
+
+  static const tsRedRegular24 = TextStyle(
+    color: AppColors.red,
+    fontWeight: FontWeight.w400,
+    fontSize: 24.0,
+  );
+
   static const tsGreenRegular16 = TextStyle(
     color: AppColors.green,
     fontWeight: FontWeight.w400,
@@ -48,6 +65,18 @@ class Styles {
     color: AppColors.green,
     fontWeight: FontWeight.w400,
     fontSize: 14.0,
+  );
+
+  static const tsGreenRegular18 = TextStyle(
+    color: AppColors.green,
+    fontWeight: FontWeight.w400,
+    fontSize: 18.0,
+  );
+
+  static const tsGreenRegular24 = TextStyle(
+    color: AppColors.green,
+    fontWeight: FontWeight.w400,
+    fontSize: 24.0,
   );
 
   static const tsRedRegular14 = TextStyle(
