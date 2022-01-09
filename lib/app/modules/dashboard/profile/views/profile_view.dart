@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:starter/app/theme/app_colors.dart';
-import 'package:starter/app/theme/styles.dart';
+import 'package:starter/app/data/values/strings.dart';
 import 'package:starter/widgets/app_bar/custom_app_bar.dart';
+import 'package:starter/widgets/profile_summary/profile_summary_box.dart';
+import 'package:starter/widgets/setting/setting_button.dart';
 
 class ProfileView extends StatelessWidget {
   @override
@@ -9,91 +10,25 @@ class ProfileView extends StatelessWidget {
     return Expanded(
         child: ListView(
       children: [
-        CustomAppBar.dashboardAppBar('Profile'),
-        ListTile(
-          title: Text(
-            'Chandan Kumar',
-            style: Styles.tsPrimaryColorRegular16,
-          ),
-          subtitle: Text(
-            'DE1023\ncksharma122@gmail.com',
-            style: Styles.tsPrimaryColorRegular16,
-          ),
-          isThreeLine: true,
-          trailing: Container(
-            height: 60,
-            width: 60,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-                border: Border.all(
-                  color: AppColors.black,
-                  width: 2,
-                ),
-                borderRadius: BorderRadius.all(Radius.circular(100))),
-            child: Text(
-              'CK',
-              style: TextStyle(
-                fontSize: 28,
-              ),
-            ),
-          ),
-        ),
-        ListTile(
-          title: Text(
-            'Funds',
-            style: Styles.tsPrimaryColorRegular16,
-          ),
-          trailing: Icon(Icons.money),
-        ),
-        ListTile(
-          title: Text(
-            'Profile',
-            style: Styles.tsPrimaryColorRegular16,
-          ),
-          trailing: Icon(Icons.person),
-        ),
-        ListTile(
-          title: Text(
-            'Settings',
-            style: Styles.tsPrimaryColorRegular16,
-          ),
-          trailing: Icon(Icons.settings),
-        ),
-        ListTile(
-          title: Text(
-            'Console',
-            style: Styles.tsPrimaryColorRegular16,
-          ),
-          trailing: Icon(Icons.flag),
-        ),
-        ListTile(
-          title: Text(
-            'Invite friends',
-            style: Styles.tsPrimaryColorRegular16,
-          ),
-          trailing: Icon(Icons.share),
-        ),
-        ListTile(
-          title: Text(
-            'Support',
-            style: Styles.tsPrimaryColorRegular16,
-          ),
-          trailing: Icon(Icons.help_center),
-        ),
-        ListTile(
-          title: Text(
-            'User manual',
-            style: Styles.tsPrimaryColorRegular16,
-          ),
-          trailing: Icon(Icons.book),
-        ),
-        ListTile(
-          title: Text(
-            'Logout',
-            style: Styles.tsPrimaryColorRegular16,
-          ),
-          trailing: Icon(Icons.logout),
-        ),
+        CustomAppBar.dashboardAppBar(Strings.profile),
+        ProfileSummaryBox(
+            firstName: 'Chandan',
+            lastName: 'Kumar',
+            email: 'cksharma122@gmail.com',
+            dmatId: 'DE1021'),
+        SettingButton(label: Strings.funds, icon: Icon(Icons.money_outlined)),
+        SettingButton(
+            label: Strings.profile, icon: Icon(Icons.person_outlined)),
+        SettingButton(
+            label: Strings.settings, icon: Icon(Icons.settings_outlined)),
+        SettingButton(label: Strings.console, icon: Icon(Icons.flag_outlined)),
+        SettingButton(
+            label: Strings.invite_friends, icon: Icon(Icons.share_outlined)),
+        SettingButton(
+            label: Strings.support, icon: Icon(Icons.help_center_outlined)),
+        SettingButton(
+            label: Strings.user_manual, icon: Icon(Icons.help_center_outlined)),
+        SettingButton(label: Strings.logout, icon: Icon(Icons.logout_outlined)),
       ],
     ));
   }

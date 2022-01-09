@@ -7,6 +7,14 @@ class Strings {
   static const getOTP = 'Get OTP';
   static const retry = 'Retry';
   static const watchlist = 'Watchlist';
+  static const funds = 'Funds';
+  static const profile = 'Profile';
+  static const settings = 'Settings';
+  static const console = 'Console';
+  static const invite_friends = 'Invite friends';
+  static const support = 'Support';
+  static const user_manual = 'User manual';
+  static const logout = 'Logout';
 }
 
 class ErrorMessages {

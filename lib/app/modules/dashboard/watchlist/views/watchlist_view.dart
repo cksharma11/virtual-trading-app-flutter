@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:starter/app/modules/dashboard/views/ticker_item.dart';
+import 'package:starter/widgets/app_bar/custom_app_bar.dart';
 import 'package:starter/widgets/search/search_bar.dart';
 
 class WatchlistView extends StatelessWidget {
@@ -10,6 +11,7 @@ class WatchlistView extends StatelessWidget {
     return SafeArea(
       child: Column(
         children: [
+          CustomAppBar.dashboardAppBar('Marketwatch'),
           SearchBar(),
           Expanded(
             child: ListView.separated(
