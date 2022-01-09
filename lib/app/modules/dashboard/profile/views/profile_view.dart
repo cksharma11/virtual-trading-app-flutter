@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:starter/app/theme/app_colors.dart';
 import 'package:starter/app/theme/styles.dart';
+import 'package:starter/widgets/app_bar/custom_app_bar.dart';
 
 class ProfileView extends StatelessWidget {
   @override
@@ -8,6 +9,7 @@ class ProfileView extends StatelessWidget {
     return Expanded(
         child: ListView(
       children: [
+        CustomAppBar.dashboardAppBar('Profile'),
         ListTile(
           title: Text(
             'Chandan Kumar',
