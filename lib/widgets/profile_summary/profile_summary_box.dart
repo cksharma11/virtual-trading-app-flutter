@@ -17,30 +17,33 @@ class ProfileSummaryBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(
-        '$firstName $lastName',
-        style: Styles.tsPrimaryColorRegular16,
-      ),
-      subtitle: Text(
-        '$dmatId\n$email',
-        style: Styles.tsPrimaryColorRegular16,
-      ),
-      isThreeLine: true,
-      trailing: Container(
-        height: 60,
-        width: 60,
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-            border: Border.all(
-              color: AppColors.black,
-              width: 2,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ListTile(
+        title: Text(
+          '$firstName $lastName',
+          style: Styles.tsPrimaryColorRegular16,
+        ),
+        subtitle: Text(
+          '$dmatId\n$email',
+          style: Styles.tsPrimaryColorRegular16,
+        ),
+        isThreeLine: true,
+        trailing: Container(
+          height: 60,
+          width: 60,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              border: Border.all(
+                color: AppColors.black,
+                width: 2,
+              ),
+              borderRadius: BorderRadius.all(Radius.circular(100))),
+          child: Text(
+            '${firstName[0]}${lastName[0]}',
+            style: TextStyle(
+              fontSize: 28,
             ),
-            borderRadius: BorderRadius.all(Radius.circular(100))),
-        child: Text(
-          '${firstName[0]}${lastName[0]}',
-          style: TextStyle(
-            fontSize: 28,
           ),
         ),
       ),
