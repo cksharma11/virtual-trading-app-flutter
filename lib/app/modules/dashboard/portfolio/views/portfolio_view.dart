@@ -19,8 +19,8 @@ class PortfolioView extends StatelessWidget {
               isScrollable: false,
               controller: null,
               tabs: [
-                CustomText.tsPrimaryRegular14Text('Holdings'),
-                CustomText.tsPrimaryRegular14Text('Positions'),
+                Tab(child: CustomText.tsPrimaryRegular14Text('Holdings')),
+                Tab(child: CustomText.tsPrimaryRegular14Text('Positions')),
               ],
             ),
           ),

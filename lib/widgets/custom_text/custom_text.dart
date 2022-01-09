@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:starter/app/theme/app_colors.dart';
 import 'package:starter/app/theme/styles.dart';
 
 class CustomText {
   CustomText._privateConstructor();
+
+  static tsPrimaryRegularBlack16Text(label) =>  Text(
+    label,
+    style: Styles.tsPrimaryColorRegular16,
+  );
 
   // Regular
   static tsPrimaryRegular24Text(label) =>  Text(

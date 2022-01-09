@@ -50,10 +50,19 @@ class PortfolioSummary extends StatelessWidget {
               children: [
                 CustomText.tsPrimaryRegular18Text(Strings.profit_loss),
                 Row(
-                  children: [
-                    CustomText.tsPrimaryRegular18Text('$tickerSymbol${change.abs()}'),
-                    CustomText.tsPrimaryRegular14Text('($tickerSymbol$changePercentage%)'),
-                  ],
+                  children: isInProfit
+                      ? [
+                          CustomText.tsGreenRegular18Text(
+                              '$tickerSymbol${change.abs()}'),
+                          CustomText.tsGreenRegular14Text(
+                              '($tickerSymbol$changePercentage%)')
+                        ]
+                      : [
+                          CustomText.tsRedRegular18Text(
+                              '$tickerSymbol${change.abs()}'),
+                          CustomText.tsRedRegular14Text(
+                              '($tickerSymbol$changePercentage%)')
+                        ],
                 )
               ],
             ),
