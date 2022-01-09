@@ -46,18 +46,23 @@ class OrdersView extends StatelessWidget {
           ),
           SearchBar(),
           SafeArea(
-            child: Column(
-              children: [
-                Image(image: AssetImage(Images.stockChartImage),),
-                Text(
-                  'No pending orders',
-                  style: Styles.tsPrimaryColorRegular18,
-                ),
-                Text(
-                  'Place your order from your watchlist',
-                  style: Styles.tsPrimaryColorRegular14,
-                ),
-              ],
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(20, 100, 20, 8),
+              child: Column(
+                children: [
+                  Image(
+                    image: AssetImage(Images.stockChartImage),
+                  ),
+                  Text(
+                    'No pending orders',
+                    style: Styles.tsPrimaryColorRegular18,
+                  ),
+                  Text(
+                    'Place your order from your watchlist',
+                    style: Styles.tsPrimaryColorRegular14,
+                  ),
+                ],
+              ),
             ),
           ),
         ],

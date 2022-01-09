@@ -18,7 +18,6 @@ class WatchlistView extends StatelessWidget {
           ),
           DefaultTabController(
             length: 3,
-            initialIndex: 0,
             child: TabBar(
               isScrollable: false,
               controller: null,

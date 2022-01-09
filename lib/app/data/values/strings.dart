@@ -37,5 +37,5 @@ class BottomNavigationButtons {
   static const learn = 'Learn';
   static const orders = 'Orders';
   static const portfolio = 'Portfolio';
-  static const profile = 'Profile';
+  static const account = 'Account';
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:starter/app/theme/styles.dart';
-import 'package:starter/widgets/search/search_bar.dart';
 
 class PortfolioView extends StatelessWidget {
   const PortfolioView({Key? key}) : super(key: key);
@@ -79,7 +78,7 @@ class PortfolioView extends StatelessWidget {
                       Row(
                         children: [
                           Text('+21,312',style: Styles.tsPrimaryColorRegular18,),
-                          Text('+2.3%',style: Styles.tsPrimaryColorRegular14,),
+                          Text('(+2.3%)',style: Styles.tsPrimaryColorRegular14,),
                         ],
                       )
                     ],

@@ -18,7 +18,7 @@ class BottomNavigation extends StatelessWidget {
       onTap: onPageSelection,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-          icon: Icon(Icons.bookmark),
+          icon: Icon(Icons.bookmark_outline),
           label: BottomNavigationButtons.watchlist,
         ),
         BottomNavigationBarItem(
@@ -34,8 +34,8 @@ class BottomNavigation extends StatelessWidget {
           label: BottomNavigationButtons.learn,
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.person_outline),
-          label: BottomNavigationButtons.profile,
+          icon: Icon(Icons.account_circle_outlined),
+          label: BottomNavigationButtons.account,
         ),
       ],
     );

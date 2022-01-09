@@ -35,7 +35,7 @@ class ProfileSummaryBox extends StatelessWidget {
           alignment: Alignment.center,
           decoration: BoxDecoration(
               border: Border.all(
-                color: AppColors.black,
+                color: AppColors.shimmerHighlightColor,
                 width: 2,
               ),
               borderRadius: BorderRadius.all(Radius.circular(100))),
@@ -43,6 +43,7 @@ class ProfileSummaryBox extends StatelessWidget {
             '${firstName[0]}${lastName[0]}',
             style: TextStyle(
               fontSize: 28,
+              color: AppColors.appBarBackground,
             ),
           ),
         ),

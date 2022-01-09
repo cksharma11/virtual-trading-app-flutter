@@ -14,10 +14,10 @@ class ProfileView extends StatelessWidget {
             lastName: 'Kumar',
             email: 'cksharma122@gmail.com',
             dmatId: 'DE1021'),
-        SettingButton(label: Strings.funds, icon: Icon(Icons.money_outlined)),
+        SettingButton(label: Strings.funds, icon: Icon(Icons.account_balance_wallet_outlined)),
         Divider(),
         SettingButton(
-            label: Strings.profile, icon: Icon(Icons.person_outlined)),
+            label: Strings.profile, icon: Icon(Icons.account_circle_outlined)),
         Divider(),
         SettingButton(
             label: Strings.settings, icon: Icon(Icons.settings_outlined)),
