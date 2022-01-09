@@ -15,6 +15,9 @@ class Strings {
   static const support = 'Support';
   static const user_manual = 'User manual';
   static const logout = 'Logout';
+  static const invested = 'Invested';
+  static const current = 'Current';
+  static const profit_loss = 'P&L';
 }
 
 class ErrorMessages {
