@@ -11,7 +11,6 @@ class WatchlistView extends StatelessWidget {
     return SafeArea(
       child: Column(
         children: [
-          CustomAppBar.dashboardAppBar('Marketwatch'),
           SearchBar(),
           Expanded(
             child: ListView.separated(

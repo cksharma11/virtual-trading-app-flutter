@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:starter/app/data/values/strings.dart';
-import 'package:starter/widgets/app_bar/custom_app_bar.dart';
 import 'package:starter/widgets/profile_summary/profile_summary_box.dart';
 import 'package:starter/widgets/setting/setting_button.dart';
 
@@ -10,7 +9,6 @@ class ProfileView extends StatelessWidget {
     return Expanded(
         child: ListView(
       children: [
-        CustomAppBar.dashboardAppBar(Strings.profile),
         ProfileSummaryBox(
             firstName: 'Chandan',
             lastName: 'Kumar',
