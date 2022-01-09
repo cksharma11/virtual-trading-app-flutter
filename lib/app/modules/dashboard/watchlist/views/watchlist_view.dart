@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:starter/app/modules/dashboard/views/ticker_item.dart';
-import 'package:starter/widgets/app_bar/custom_app_bar.dart';
+import 'package:starter/app/theme/styles.dart';
 import 'package:starter/widgets/search/search_bar.dart';
 
 class WatchlistView extends StatelessWidget {
@@ -11,6 +11,39 @@ class WatchlistView extends StatelessWidget {
     return SafeArea(
       child: Column(
         children: [
+          Text(
+            'Marketwatch',
+            style: TextStyle(fontSize: 24),
+            textAlign: TextAlign.left,
+          ),
+          DefaultTabController(
+            length: 3,
+            initialIndex: 0,
+            child: TabBar(
+              isScrollable: false,
+              controller: null,
+              tabs: [
+                Tab(
+                  child: Text(
+                    'Watchlist 1',
+                    style: Styles.tsPrimaryColorRegular14,
+                  ),
+                ),
+                Tab(
+                  child: Text(
+                    'Watchlist 2',
+                    style: Styles.tsPrimaryColorRegular14,
+                  ),
+                ),
+                Tab(
+                  child: Text(
+                    'Watchlist 3',
+                    style: Styles.tsPrimaryColorRegular14,
+                  ),
+                ),
+              ],
+            ),
+          ),
           SearchBar(),
           Expanded(
             child: ListView.separated(
