@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:starter/app/data/values/images.dart';
 import 'package:starter/app/theme/styles.dart';
