@@ -24,49 +24,57 @@ class PortfolioSummary extends StatelessWidget {
 
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.all(30.0),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        padding: const EdgeInsets.all(10.0),
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all()
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
               children: [
-                Column(
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CustomText.tsPrimaryRegular14Text(Strings.invested),
-                    CustomText.tsPrimaryRegular18Text(investedMoney.toString()),
+                    Column(
+                      children: [
+                        CustomText.tsPrimaryRegular14Text(Strings.invested),
+                        CustomText.tsPrimaryRegular18Text(investedMoney.toString()),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        CustomText.tsPrimaryRegular14Text(Strings.current),
+                        CustomText.tsPrimaryRegular18Text(currentValue.toString()),
+                      ],
+                    )
                   ],
                 ),
-                Column(
-                  children: [
-                    CustomText.tsPrimaryRegular14Text(Strings.current),
-                    CustomText.tsPrimaryRegular18Text(currentValue.toString()),
-                  ],
-                )
-              ],
-            ),
-            Divider(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CustomText.tsPrimaryRegular18Text(Strings.profit_loss),
+                Divider(),
                 Row(
-                  children: isInProfit
-                      ? [
-                          CustomText.tsGreenRegular18Text(
-                              '$tickerSymbol${change.abs()}'),
-                          CustomText.tsGreenRegular14Text(
-                              '($tickerSymbol$changePercentage%)')
-                        ]
-                      : [
-                          CustomText.tsRedRegular18Text(
-                              '$tickerSymbol${change.abs()}'),
-                          CustomText.tsRedRegular14Text(
-                              '($tickerSymbol$changePercentage%)')
-                        ],
-                )
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    CustomText.tsPrimaryRegular18Text(Strings.profit_loss),
+                    Row(
+                      children: isInProfit
+                          ? [
+                              CustomText.tsGreenRegular18Text(
+                                  '$tickerSymbol${change.abs()}'),
+                              CustomText.tsGreenRegular14Text(
+                                  '($tickerSymbol$changePercentage%)')
+                            ]
+                          : [
+                              CustomText.tsRedRegular18Text(
+                                  '$tickerSymbol${change.abs()}'),
+                              CustomText.tsRedRegular14Text(
+                                  '($tickerSymbol$changePercentage%)')
+                            ],
+                    )
+                  ],
+                ),
               ],
             ),
-          ],
+          ),
         ),
       ),
     );

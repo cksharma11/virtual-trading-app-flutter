@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:starter/app/theme/styles.dart';
+import 'package:starter/widgets/custom_text/custom_text.dart';
 
 class TickerItem extends StatelessWidget {
   final String symbol;
@@ -27,22 +28,23 @@ class TickerItem extends StatelessWidget {
     final changePercentage = getChangePercentage(change);
 
     return ListTile(
-      title: Text(symbol),
-      subtitle: Text(stockName),
-      trailing: Column(children: [
-        Text(
-          currentPrice.toString(),
-          style: isPositiveChange
-              ? Styles.tsGreenRegular16
-              : Styles.tsRedRegular16,
-        ),
-        Text(
-          '$changeSymbol$change ($changeSymbol$changePercentage%)',
-          style: isPositiveChange
-              ? Styles.tsGreenRegular14
-              : Styles.tsRedRegular14,
-        ),
-      ]),
+      title: CustomText.tsPrimaryRegular14Text(symbol),
+      subtitle: CustomText.tsPrimaryRegular14Text(stockName),
+      trailing: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Column(children: [
+            isPositiveChange
+                ? CustomText.tsGreenRegular14Text(currentPrice.toString())
+                : CustomText.tsRedRegular14Text(currentPrice.toString()),
+            isPositiveChange
+                ? CustomText.tsGreenRegular14Text(
+                    '$changeSymbol$change ($changeSymbol$changePercentage%)')
+                : CustomText.tsRedRegular14Text(
+                    '$changeSymbol$change ($changeSymbol$changePercentage%)')
+          ]),
+        ],
+      ),
     );
   }
 }

@@ -14,7 +14,7 @@ class App extends StatelessWidget {
       navigatorKey: GlobalKeys.navigationKey,
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
-      darkTheme: AppTheme.dark,
+      darkTheme: AppTheme.light,
       initialRoute: Routes.DASHBOARD,
       getPages: AppPages.pages,
       defaultTransition: Transition.fade,

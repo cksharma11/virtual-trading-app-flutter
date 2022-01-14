@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:starter/app/data/values/strings.dart';
+import 'package:starter/widgets/custom_tab_view/custom_tab_view.dart';
 import 'package:starter/widgets/custom_text/custom_text.dart';
 import 'package:starter/widgets/portfolio/portfolio_summary.dart';
 
@@ -13,17 +14,12 @@ class PortfolioView extends StatelessWidget {
         children: [
           CustomText.tsPrimaryRegular24Text(BottomNavigationButtons.portfolio),
           DefaultTabController(
-            length: 2,
-            initialIndex: 0,
-            child: TabBar(
-              isScrollable: false,
-              controller: null,
-              tabs: [
+              length: 2,
+              initialIndex: 0,
+              child: CustomTabView(tabs: [
                 Tab(child: CustomText.tsPrimaryRegular14Text('Holdings')),
                 Tab(child: CustomText.tsPrimaryRegular14Text('Positions')),
-              ],
-            ),
-          ),
+              ])),
           PortfolioSummary(investedMoney: 523123, currentValue: 641124)
         ],
       ),

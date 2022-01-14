@@ -16,6 +16,7 @@ class BottomNavigation extends StatelessWidget {
       currentIndex: currentIndex,
       type: BottomNavigationBarType.fixed,
       onTap: onPageSelection,
+      selectedFontSize: 16,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.bookmark_outline),
