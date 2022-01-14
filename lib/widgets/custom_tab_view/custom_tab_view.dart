@@ -12,6 +12,7 @@ class CustomTabView extends StatelessWidget {
       length: this.tabs.length,
       initialIndex: initialIndex,
       child: TabBar(
+        physics: AlwaysScrollableScrollPhysics(),
         indicatorColor: Colors.black,
         isScrollable: false,
         controller: null,

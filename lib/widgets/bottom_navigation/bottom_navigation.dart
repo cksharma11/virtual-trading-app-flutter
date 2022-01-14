@@ -13,7 +13,9 @@ class BottomNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      selectedItemColor: Colors.black,
       currentIndex: currentIndex,
+      iconSize: 25,
       type: BottomNavigationBarType.fixed,
       onTap: onPageSelection,
       selectedFontSize: 16,

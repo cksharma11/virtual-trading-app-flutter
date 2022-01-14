@@ -16,24 +16,9 @@ class OrdersView extends StatelessWidget {
           CustomText.tsPrimaryRegular24Text('Orders'),
           CustomTabView(
             tabs: [
-              Tab(
-                child: Text(
-                  'Open',
-                  style: Styles.tsPrimaryColorRegular14,
-                ),
-              ),
-              Tab(
-                child: Text(
-                  'Executed',
-                  style: Styles.tsPrimaryColorRegular14,
-                ),
-              ),
-              Tab(
-                child: Text(
-                  'GTT',
-                  style: Styles.tsPrimaryColorRegular14,
-                ),
-              ),
+              Tab(child: CustomText.tsPrimaryRegular14Text('Open')),
+              Tab(child: CustomText.tsPrimaryRegular14Text('Executed')),
+              Tab(child: CustomText.tsPrimaryRegular14Text('GTT')),
             ],
           ),
           SearchBar(),
